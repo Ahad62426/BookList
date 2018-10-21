@@ -1,27 +1,10 @@
-//import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { selectBook } from '../actions/index';
 import { bindActionCreators } from 'redux'
-/*import * as actions from '../actions';
-import { Link } from 'react-router';
-*/
 
 class BookList extends Component {
-  /*componentWillMount() {
-    this.props.fetchBooks();
-  }
-
-  renderListItem(book) {
-    return (
-      <li className="list-group-item">
-        <Link to={`/users/${book.id}`}>{book.name}</Link>
-      </li>
-    );
-  }*/
-
   renderList() {
-    //return _.map(this.props.books, this.renderListItem.bind(this));
     return this.props.books.map((book) => {
       return (
         <li 
